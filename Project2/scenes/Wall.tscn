@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxdg7en0tt3oy"]
+
+[ext_resource type="Texture2D" uid="uid://cppcflrmrot2v" path="res://art/Boundary.png" id="1_0yh2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_471cb"]
+size = Vector2(44, 471)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0yh2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_471cb")

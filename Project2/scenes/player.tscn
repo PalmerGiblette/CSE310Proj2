@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3os6xrffew7a"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_osyj4"]
+[ext_resource type="Texture2D" uid="uid://cjbow06h2mly7" path="res://art/player.png" id="2_wlyy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrxmc"]
+size = Vector2(49, 48)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_osyj4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -22.0
+offset_top = -23.0
+offset_right = 28.0
+offset_bottom = 27.0
+texture = ExtResource("2_wlyy4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 2)
+shape = SubResource("RectangleShape2D_xrxmc")
